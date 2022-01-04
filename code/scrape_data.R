@@ -3,10 +3,12 @@ library(tidyverse)
 library(rvest)
 library(httr)
 
+
 #point_type is either Standard, Half-PPR, or PPR. If an invalid value, 
 #it will automatically return Half-PPR data.
 get_data <- function(week_start, week_end, year, point_type = "") {
-
+ 
+  
   if (point_type == "Standard") {
     point_type = ""
     point_type_name = "Standard"
@@ -36,9 +38,11 @@ get_data <- function(week_start, week_end, year, point_type = "") {
     Sys.sleep(1)
   }
   
+  fantasy_data <- fantasy_data %>%
+    select(Player, Team, Position, Points, week) %>%
+    mutate(scoring_format = point_type_name)
   
   return(fantasy_data)
 }
 
 test <- get_data(1, 2, 2021, "PPR")
-
