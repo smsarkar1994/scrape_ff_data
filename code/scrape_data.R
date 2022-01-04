@@ -3,12 +3,10 @@ library(tidyverse)
 library(rvest)
 library(httr)
 
-
 #point_type is either Standard, Half-PPR, or PPR. If an invalid value, 
 #it will automatically return Half-PPR data.
 get_data <- function(week_start, week_end, year, point_type = "") {
  
-  
   if (point_type == "Standard") {
     point_type = ""
     point_type_name = "Standard"
