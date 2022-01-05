@@ -13,7 +13,7 @@ SAY NO TO SUICIDE PUBLIC LICENSE
 
 Version 1.0, September 2019
 
-Copyright (C) 2021 Sameer Sarkar
+Copyright (C) 2022 Sameer Sarkar
 
 Everyone is permitted to copy and distribute verbatim copies
 of this license document.
